@@ -25,6 +25,7 @@ img:hover {
 .container > div.title {
     grid-area: title;
     text-align: center;
+    font-family: "Courier New", serif;
 }
 .container > div.image {
     grid-area: image;
@@ -32,8 +33,10 @@ img:hover {
 .container > div.content {
     text-align: center;
     grid-area: content;
+    font-family: "Courier New", serif;
 }
 .container > div.footer {
     grid-area: footer;
     text-align: center;
+    font-family: "Courier New", serif;
 }
