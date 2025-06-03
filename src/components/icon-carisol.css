@@ -2,7 +2,6 @@
     display: inline-block;
     justify-content: center;
     overflow: hidden;
-    padding: 60px 0;
     white-space: nowrap;
     position: relative;
 }
@@ -34,13 +33,13 @@
     right: 0;
 }
 
-.icon-slide:hover .logos-slide {
+.icon-slide:hover .icon-slide {
     animation-play-state: paused;
 }
 
 .icon-slide {
     display: inline-block;
-    animation: 35s slide infinite linear;
+    animation:20s slide infinite linear;
 }
 
 .icons {
