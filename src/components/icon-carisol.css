@@ -1,0 +1,50 @@
+.icon-container {
+    display: inline-block;
+    justify-content: center;
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.icon-slide:before,
+.icon-slide:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.icon-slide:before {
+    left: 0;
+}
+
+.icon-slide:after {
+    right: 0;
+}
+
+.icon-slide:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.icon-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.icons {
+    text-decoration: none;
+    height: 50px;
+    margin: 0 40px;
+}
