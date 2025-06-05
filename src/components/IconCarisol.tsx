@@ -6,7 +6,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const IconCarisol = () => {
     return (
         <div className="icon-container">
-            {/*TODO Amend slide so it crosses entire page*/}
         <div className="icon-slide">
                 <a href="https://docs.aws.amazon.com/"><FontAwesomeIcon icon={faAws} className="icons" /></a>
                 <a href="https://docs.docker.com/"><FontAwesomeIcon icon={faDocker} className="icons" /></a>
