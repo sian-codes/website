@@ -3,7 +3,6 @@
 import '../views/profile-view.css'
 // @ts-ignore
 import picture from '../assets/display.png'
-import IconCarisol from "../components/IconCarisol.tsx";
 
 const ProfileView = () => {
     return (
@@ -12,8 +11,7 @@ const ProfileView = () => {
             <div className="image"><img alt="Me" src={picture}></img></div>
             <div className="content"><h3>Hey, I'm Siân a full stack Software Engineer</h3>
                 <p>I have four years professional experience building and maintaining microservices, SDK's and products in a FinTech environment.</p></div>
-            <div className="footer"><h4>I love working in and with the following technologies:</h4>
-            <p><IconCarisol /></p>
+            <div className="footer"><h4>Currently I am learning Kotlin and Android Development:</h4>
             </div>
         </div>
     );
