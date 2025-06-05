@@ -2,6 +2,7 @@
 import './App.css'
 import Header from "./components/Header.tsx";
 import ProfileView from "./views/Profile-View.tsx";
+import TechnologyView from "./views/TechnologyView.tsx";
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
       <div>
           <ProfileView />
       </div>
+        <div>
+            <TechnologyView />
+        </div>
     </>
   )
 }
