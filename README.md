@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# React CV Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio and CV website built using **React** and **Vite**. This site is designed to showcase the work, skills, and experience of the developer, **Sian-Codes**.
 
-Currently, two official plugins are available:
+## 🚀 Project Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website serves as an interactive and modern CV for **Sian-Codes**, allowing potential employers, collaborators, and clients to:
 
-## Expanding the ESLint configuration
+- View professional experience and education
+- Explore a portfolio of projects
+- Learn more about technical skills and interests
+- Access contact information
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React** – For building a dynamic and component-based user interface
+- **Vite** – For fast and optimized development tooling
+- **TypeScript** – Application logic
+- **HTML & CSS** – Layout and styling
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run the project locally, follow these steps:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Sian-Codes/website.git
+   cd website
+   
+2. **Install Dependencies**
+   ```bash
+   npm install
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+
+4. **Open in browser**
+  
+   Navigate to http://localhost:5173 (or the port Vite assigns) to view the site.
+
+## 👩‍💻 Author
+
+**Sian-Codes**
+
+- GitHub: [Sian-Codes](https://github.com/Sian-Codes)
+- Website: [www.siancodes.com](https://www.siancodes.com)
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
