@@ -1,4 +1,3 @@
-// @ts-ignore
 import './icon-carisol.css';
 import { faDocker, faAws, faBootstrap, faRaspberryPi, faCodepen, faConfluence, faSwift, faCss3, faHtml5, faJava, faJenkins, faNodeJs, faJs, faNpm, faPython, faReact, faReadme, faSass, faYarn} from "@awesome.me/kit-459d1b3662/icons/classic/brands";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
