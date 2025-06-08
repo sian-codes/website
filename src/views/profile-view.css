@@ -11,7 +11,7 @@
     margin: 2rem auto auto;
 }
 
-img {
+.image {
     border-radius: 50%;
 }
 
@@ -35,8 +35,14 @@ img:hover {
     grid-area: content;
     font-family: "Courier New", serif;
 }
+
 .container > div.footer {
     grid-area: footer;
     text-align: center;
     font-family: "Courier New", serif;
+}
+
+.logo {
+    width: 40%;
+    height: 40%;
 }
