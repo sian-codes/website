@@ -1,7 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import '../views/profile-view.css'
-// @ts-ignore
 import picture from '../assets/display.png'
 
 const ProfileView = () => {
