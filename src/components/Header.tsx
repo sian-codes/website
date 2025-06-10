@@ -1,4 +1,3 @@
-// @ts-ignore
 import '../components/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub, faLinkedin} from "@awesome.me/kit-459d1b3662/icons/classic/brands";

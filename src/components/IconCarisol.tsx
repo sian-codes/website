@@ -1,4 +1,3 @@
-// @ts-ignore
 import './icon-carisol.css';
 import { faDocker, faAws, faBootstrap, faRaspberryPi, faCodepen, faConfluence, faSwift, faCss3, faHtml5, faJava, faJenkins, faNodeJs, faJs, faNpm, faPython, faReact, faReadme, faSass, faYarn} from "@awesome.me/kit-459d1b3662/icons/classic/brands";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -6,7 +5,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const IconCarisol = () => {
     return (
         <div className="icon-container">
-            {/*TODO Amend slide so it crosses entire page*/}
         <div className="icon-slide">
                 <a href="https://docs.aws.amazon.com/"><FontAwesomeIcon icon={faAws} className="icons" /></a>
                 <a href="https://docs.docker.com/"><FontAwesomeIcon icon={faDocker} className="icons" /></a>
