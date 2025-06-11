@@ -1,6 +1,9 @@
 import 'portfolio-view.css'
 
 const PortfolioView = () => {
+    <div className="portfolio-view">
+
+    </div>
 
     // TODO: Create view of the portfolio into a grid format
     // TODO: Include thumbnails of projects you've worked on and short descriptions
