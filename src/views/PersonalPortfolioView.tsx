@@ -1,6 +1,6 @@
 import 'portfolio-view.css'
 
-const PortfolioView = () => {
+const PersonalPortfolioView = () => {
     <div className="portfolio-view">
 
     </div>
@@ -11,4 +11,4 @@ const PortfolioView = () => {
 
 }
 
-return default PortfolioView
+return default PersonalPortfolioView
