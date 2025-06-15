@@ -1,7 +1,7 @@
 import './App.css'
-import Header from "./components/Header.tsx";
-import ProfileView from "./views/Profile-View.tsx";
-import TechnologyView from "./views/TechnologyView.tsx";
+import Header from './components/Header.tsx';
+import ProfileView from '../src/views/ProfileView.tsx';
+import TechnologyView from '../src/views/TechnologyView.tsx';
 
 function App() {
 
