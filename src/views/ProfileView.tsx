@@ -1,4 +1,5 @@
 import '../styling/profileView.css'
+import '../styling/ProfileView.css';
 import picture from '../assets/display.png'
 import logo from '../assets/worldpay-logo-dark.svg'
 
