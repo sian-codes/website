@@ -5,7 +5,12 @@
 }
 
 .icons {
+    padding-top: 2rem;
     margin: 2rem;
+}
+
+.icons #light {
+    color: #1A5319;
 }
 
 .icons:hover {
