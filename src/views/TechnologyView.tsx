@@ -1,5 +1,5 @@
 import '../styling/TechnologyView.css';
-import IconCarisol from '../components/IconCarisol.tsx';
+import IconCarisol from "../components/IconCarisol.tsx";
 
 const TechnologyView = () => {
     return (
