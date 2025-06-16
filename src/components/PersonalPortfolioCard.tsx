@@ -18,14 +18,14 @@ const cardContent = [{
     {
         image: InstaDupe,
         id: 2,
-        title: 'Another Project',
-        description: 'Description of another project goes here. Description of another project goes here.',
+        title: 'Instagram UI Clone (Styling Test Project)',
+        description: 'Recreated Instagram’s core user interface as a front-end styling and layout exercise. Used React to build reusable components such as the feed, profile, navigation bar, and stories layout.',
     },
     {
         image: InstaDupe,
         id: 3,
-        title: 'Yet Another Project',
-        description: 'Description of yet another project goes here. Description of another project goes here.',
+        title: 'Instagram UI Clone (Styling Test Project)',
+        description: 'Recreated Instagram’s core user interface as a front-end styling and layout exercise. Used React to build reusable components such as the feed, profile, navigation bar, and stories layout.',
     }
 ];
 
