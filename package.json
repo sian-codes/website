@@ -12,10 +12,14 @@
   "dependencies": {
     "@awesome.me/kit-459d1b3662": "^1.0.4",
     "@awesome.me/kit-eb040592c0": "^1.0.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/material": "^7.1.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-switch": "^7.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
