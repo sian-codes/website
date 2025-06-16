@@ -1,7 +1,8 @@
 import './App.css'
 import Header from "./components/Header.tsx";
-import ProfileView from "./views/Profile-View.tsx";
+import ProfileView from "../src/views/ProfileView.tsx";
 import TechnologyView from "./views/TechnologyView.tsx";
+import PersonalPortfolioCard from "./components/PersonalPortfolioCard.tsx";
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
       </div>
         <div>
             <TechnologyView />
+        </div>
+        <div>
+            <PersonalPortfolioCard />
         </div>
     </>
   )

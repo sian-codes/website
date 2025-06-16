@@ -1,4 +1,4 @@
-import '../views/profile-view.css'
+import '../styling/profileView.css'
 import picture from '../assets/display.png'
 import logo from '../assets/worldpay-logo-dark.svg'
 

@@ -1,4 +1,4 @@
-import '../views/technology-view.css';
+import '../styling/TechnologyView.css';
 import IconCarisol from "../components/IconCarisol.tsx";
 
 const TechnologyView = () => {
