@@ -1,8 +1,8 @@
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #80AF81);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.image:hover {
+  filter: drop-shadow(0 0 2em #80AF81);
 }
 
 @keyframes logo-spin {
@@ -30,6 +30,15 @@
 
 #light {
   background-color: #D6EFD8;
+  color: #1A5319;
+}
+
+#light .icons {
+  color: #1A5319;
+}
+
+#light .icons:hover {
+  color: #80AF81;
 }
 
 #dark {
