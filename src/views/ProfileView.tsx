@@ -9,6 +9,11 @@ const ProfileView = () => {
             <div className="title"><h2>Siân the Software Engineer</h2></div>
             <div><img alt="Me" src={picture} className="image"></img></div>
             <div className="content"><h3>Hey, I'm Siân a full stack Software Engineer</h3>
+            <p>I have four years professional experience building and maintaining microservices, SDK's and products in a FinTech environment.</p>
+            <p></p>
+            </div>
+            <div className="footer"><h4>I love working in and with the following technologies:</h4>
+            <p><IconCarisol /></p>
                 <p>I have four years professional experience building and maintaining microservices, SDK's and products
                     in a FinTech environment.</p>
                 <p>In my personal life I love watching and reading Science Fiction, playing games on my Xbox or Switch
