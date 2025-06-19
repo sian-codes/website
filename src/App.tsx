@@ -7,6 +7,7 @@ import {createContext, useState} from "react";
 import ReactSwitch from "react-switch";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSunBright} from "@awesome.me/kit-459d1b3662/icons/classic/solid";
+import Footer from "./components/Footer.tsx";
 
 const ThemeContext = createContext(null)
 
@@ -36,6 +37,7 @@ function App() {
           <ProfileView />
             <TechnologyView />
             <PersonalPortfolioCard />
+          <Footer />
         </div>
     </ThemeContext.Provider>
   )
