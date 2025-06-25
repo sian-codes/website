@@ -25,7 +25,7 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #D6EFD8;
 }
 
 #light {
@@ -41,14 +41,14 @@
   color: #80AF81;
 }
 
-#dark {
+#dark, #dark body{
     background-color: #065508;
 }
 
 .switch {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 10px;
 }
