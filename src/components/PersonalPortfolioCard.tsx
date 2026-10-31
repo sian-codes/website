@@ -1,130 +1,56 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardActions from '@mui/material/CardActions';
 import InstaDupe from '../assets/instadupe.png';
-import React, {useEffect, useRef, useState} from "react";
-import {Box} from "@mui/material";
 
-const cardContent = [{
-    image: InstaDupe,
-    id: 1,
-    title: 'Instagram UI Clone (Styling Test Project)',
-    description: 'Recreated Instagram’s core user interface as a front-end styling and layout exercise. Used React to build reusable components such as the feed, profile, navigation bar, and stories layout.',
-},
+const professionalProjects = [
     {
-        image: InstaDupe,
-        id: 2,
-        title: 'Instagram UI Clone (Styling Test Project)',
-        description: 'Recreated Instagram’s core user interface as a front-end styling and layout exercise. Used React to build reusable components such as the feed, profile, navigation bar, and stories layout.',
+        title: 'Access Checkout Android',
+        description: 'A payment SDK that helps developers integrate checkout into native Android applications.',
+        contribution: 'I’ve contributed to ongoing maintenance as part of the team since joining Worldpay, now Global Payments.',
+        tags: ['Android', 'Mobile SDK', 'Payments'],
+        documentation: 'https://docs.worldpay.com/access/products/checkout/android',
     },
     {
-        image: InstaDupe,
-        id: 3,
-        title: 'Instagram UI Clone (Styling Test Project)',
-        description: 'Recreated Instagram’s core user interface as a front-end styling and layout exercise. Used React to build reusable components such as the feed, profile, navigation bar, and stories layout.',
-    }
+        title: 'Access Checkout React Native',
+        description: 'A checkout SDK that brings native payment capabilities to React Native applications.',
+        contribution: 'I helped set up the React Native SDK using bridges to the existing iOS and Android SDKs, and have contributed to its ongoing maintenance as part of the team.',
+        tags: ['React Native', 'Native bridges', 'iOS & Android'],
+        documentation: 'https://docs.worldpay.com/access/products/checkout/react-native',
+    },
 ];
 
-function PersonalPortfolioCard() {
-    const [selectedCard, setSelectedCard] = React.useState(0);
-    const [visibleCards, setVisibleCards] = useState<number[]>([]);
-    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-    useEffect(() => {
-        const observer = new window.IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    const index = Number(entry.target.getAttribute('data-index'));
-                    if (entry.isIntersecting) {
-                        setVisibleCards((prev) =>
-                            prev.includes(index) ? prev : [...prev, index]
-                        );
-                    } else {
-                        setVisibleCards((prev) =>
-                            prev.filter((i) => i !== index)
-                        );
-                    }
-                });
-            },
-            {threshold: 0.2} // Adjust threshold as needed
-        );
-        cardRefs.current.forEach((ref) => {
-            if (ref) observer.observe(ref);
-        });
-        return () => observer.disconnect();
-    }, []);
-
-    return (
-        <Box
-            sx={{
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                gap: 4,
-                overflow: 'auto',
-            }}
-        >
-            {cardContent.map((card, index) => (
-                <Card
-                    key={card.id}
-                    component="div"
-                    ref={(el: HTMLDivElement | null) => {cardRefs.current[index] = el;}}
-                    data-index={index}
-                    sx={{
-                        maxWidth: 350,
-                        backgroundColor: '#80AF81',
-                        color: '#fff',
-                        opacity: visibleCards.includes(index) ? 1: 0,
-                        transform: visibleCards.includes(index)
-                            ? 'translateY(0) scale(1.05)'
-                            : 'translateY(40px) scale(0.95)',
-                        zIndex: visibleCards.includes(index) ? 10 : 1,
-                        transition: 'opacity 1s cubic-bezier(.4,0,.2,1),' +
-                            'transform 1s cubic-bezier(.4,0,.2,1), z-index 0.5s',
-                    }}
-                >
-                    <CardActionArea
-                        onClick={() => setSelectedCard(index)}
-                        data-active={selectedCard === index ? '' : undefined}
-                        sx={{
-                            height: '100%',
-                            '&[data-active]': {
-                                backgroundColor: 'action.selected',
-                                '&:hover': {
-                                    backgroundColor: 'action.hover',
-                                },
-                            },
-                        }}
-
-                    >
-                        <CardMedia
-                            component="img"
-                            height="350"
-                            image={card.image}
-                            alt="image"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {card.title}
-                            </Typography>
-                            <Typography variant="body2" sx={{ color: '#fff' }}>
-                                {card.description}
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary">
-                            Source Code
-                        </Button>
-                    </CardActions>
-                </Card>
+const PersonalPortfolioCard = () => (
+    <section className="work-section" id="work" aria-labelledby="work-title">
+        <div className="work-heading">
+            <div><p className="eyebrow">SELECTED WORK</p><h2 id="work-title">Software built together.</h2></div>
+            <a className="text-link" href="https://github.com/sian-codes">Explore GitHub</a>
+        </div>
+        <h3 className="work-group-title">Professional work</h3>
+        <p className="work-context">Team projects at Worldpay, now Global Payments.</p>
+        <div className="professional-projects">
+            {professionalProjects.map(project => (
+                <article className="project-card professional-project" key={project.title}>
+                    <div className="project-copy">
+                        <p className="eyebrow">PAYMENTS / MOBILE SDK</p>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <h4 className="contribution-title">My contribution</h4>
+                        <p>{project.contribution}</p>
+                        <ul className="project-tags">{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+                        <a className="text-link" href={project.documentation}>View documentation</a>
+                    </div>
+                </article>
             ))}
-        </Box>
-    );
-}
-
+        </div>
+        <h3 className="work-group-title personal-work-title">Personal work</h3>
+        <article className="project-card">
+            <div className="project-image"><img src={InstaDupe} alt="Instagram interface clone showing its feed and navigation" loading="lazy" /></div>
+            <div className="project-copy">
+                <p className="eyebrow">FRONT-END EXPLORATION</p>
+                <h3>Instagram UI Clone</h3>
+                <p>A familiar interface, built from the components up. A styling and layout exercise recreating Instagram’s feed, profiles, navigation and stories with reusable React components.</p>
+                <ul className="project-tags"><li>React</li><li>UI development</li><li>CSS</li></ul>
+                <a className="text-link" href="https://github.com/sian-codes?tab=repositories">Browse my repositories</a>
+            </div>
+        </article>
+    </section>
+);
 export default PersonalPortfolioCard;

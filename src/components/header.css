@@ -1,18 +1,1 @@
-.header {
-    display: flex;
-    justify-content: center;
-    height: 3rem;
-}
-
-.icons {
-    padding-top: 2rem;
-    margin: 2rem;
-}
-
-.icons #light {
-    color: #1A5319;
-}
-
-.icons:hover {
-    color: #D6EFD8;
-}
+.header { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:28px 0; border-bottom:1px solid var(--border); } .wordmark { font-family:'Manrope',sans-serif; font-weight:800; font-size:1.9rem; letter-spacing:-.08em; } .wordmark span { color:var(--accent); } .header nav { display:flex; gap:32px; margin-left:auto; font-size:.8rem; color:var(--muted); } .theme-toggle { display:flex; gap:8px; align-items:center; border:1px solid var(--border); border-radius:25px; background:transparent; color:var(--text); padding:8px 13px; font-size:.7rem; } .theme-toggle:hover { background:var(--surface); } @media(max-width:480px) { .header { gap:15px; } .header nav { gap:16px; font-size:.73rem; } .theme-toggle { padding:8px; } .theme-toggle span:last-child { display:none; } }
