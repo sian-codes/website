@@ -1,4 +1,4 @@
-import '../styling/experienceView.css';
+import '../styles/experience.css';
 
 const roles = [
     {
@@ -27,11 +27,11 @@ const roles = [
     },
 ];
 
-const ExperienceView = () => (
+const Experience = () => (
     <section className="experience-section" id="experience" aria-labelledby="experience-title">
         <div className="section-heading">
-            <p className="eyebrow">MY JOURNEY</p>
-            <h2 id="experience-title">Growing through engineering.</h2>
+            <p className="eyebrow">CAREER</p>
+            <h2 id="experience-title">Work history</h2>
         </div>
         <p className="experience-intro">From graduate engineer at Worldpay to Senior Associate Software Engineer, now at Global Payments.</p>
         <ol className="career-timeline" aria-label="Career history, most recent first">
@@ -53,4 +53,4 @@ const ExperienceView = () => (
     </section>
 );
 
-export default ExperienceView;
+export default Experience;

@@ -1,4 +1,4 @@
-import '../styling/technologyView.css';
+import '../styles/skills.css';
 
 const technologies = ['Kotlin', 'Android', 'Jetpack Compose', 'Mobile SDKs', 'Microservices', 'APIs', 'Software architecture', 'Java', 'React', 'TypeScript', 'AWS', 'Docker'];
 const strengths = [
@@ -8,24 +8,24 @@ const strengths = [
     },
     {
         title: 'APIs & integration',
-        description: 'API experience alongside mobile SDK development, connecting applications and services.',
+        description: 'Experience working with APIs and integrating them into mobile SDKs.',
     },
     {
         title: 'Frontend Community of Practice',
-        description: 'Contributing to the FE CoP, sharing knowledge and learning with fellow frontend engineers.',
+        description: 'I take part in the FE CoP, sharing knowledge with other frontend engineers.',
     },
 ];
 
-const TechnologyView = () => (
-    <section className="technology-view" aria-labelledby="tech-title">
+const Skills = () => (
+    <section className="skills-section" aria-labelledby="tech-title">
         <div className="section-heading">
-            <p className="eyebrow">MY TOOLKIT</p>
-            <h2 id="tech-title">Good ideas. The right tools.</h2>
+            <p className="eyebrow">TECHNOLOGIES</p>
+            <h2 id="tech-title">Skills & experience</h2>
         </div>
         <ul className="tech-list">{technologies.map(technology => <li key={technology}>{technology}</li>)}</ul>
-        <div className="engineering-strengths">
+        <div className="skill-areas">
             {strengths.map(strength => (
-                <article className="engineering-strength" key={strength.title}>
+                <article className="skill-area" key={strength.title}>
                     <h3>{strength.title}</h3>
                     <p>{strength.description}</p>
                 </article>
@@ -33,4 +33,4 @@ const TechnologyView = () => (
         </div>
     </section>
 );
-export default TechnologyView;
+export default Skills;

@@ -1,8 +1,8 @@
-import './icon-carisol.css';
+import './technology-carousel.css';
 import { faDocker, faAws, faBootstrap, faRaspberryPi, faCodepen, faConfluence, faSwift, faCss3, faHtml5, faJava, faJenkins, faNodeJs, faJs, faNpm, faPython, faReact, faReadme, faSass, faYarn} from "@awesome.me/kit-459d1b3662/icons/classic/brands";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const IconCarisol = () => {
+const TechnologyCarousel = () => {
     return (
         <div className="icon-container">
         <div className="icon-slide">
@@ -30,4 +30,4 @@ const IconCarisol = () => {
     )
 }
 
-export default IconCarisol
+export default TechnologyCarousel

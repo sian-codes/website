@@ -1,11 +1,11 @@
 import './popup.css'
-import ContactPopUp from "./ContactPopUp.tsx";
+import ContactDetails from "./ContactDetails.tsx";
 
 const Popup = (props: any) => {
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
-                <ContactPopUp />
+                <ContactDetails />
                 <button className="close-btn" onClick={() => props.setTrigger(false)}>Close</button>
                 {props.children}
             </div>

@@ -1,4 +1,4 @@
-const ContactPopUpCard = () => {
+const ContactDetails = () => {
     return (
         <div>
             <h3>Email: siannicole@proton.me </h3>
@@ -8,4 +8,4 @@ const ContactPopUpCard = () => {
     )
 }
 
-export default ContactPopUpCard
+export default ContactDetails

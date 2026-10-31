@@ -1,27 +1,27 @@
 .tech-list { list-style:none; display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:30px 0 0; } .tech-list li { background:var(--surface); border:1px solid var(--border); border-radius:5px; padding:12px 20px; font-size:.8rem; color:var(--muted); transition:color .2s,transform .2s; } .tech-list li:hover { color:var(--accent); transform:translateY(-3px); }
 
-.engineering-strengths {
+.skill-areas {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     margin-top: 32px;
 }
 
-.engineering-strength {
+.skill-area {
     padding: 24px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
 }
 
-.engineering-strength h3 {
+.skill-area h3 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: -.025em;
 }
 
-.engineering-strength p {
+.skill-area p {
     margin-top: 12px;
     color: var(--muted);
     font-size: .85rem;
@@ -29,5 +29,5 @@
 }
 
 @media (max-width: 760px) {
-    .engineering-strengths { grid-template-columns: 1fr; }
+    .skill-areas { grid-template-columns: 1fr; }
 }

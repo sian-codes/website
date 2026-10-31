@@ -1,11 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
-import ProfileView from './views/ProfileView';
-import TechnologyView from './views/TechnologyView';
-import PersonalPortfolioCard from './components/PersonalPortfolioCard';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
 import Footer from './components/Footer';
-import ExperienceView from './views/ExperienceView';
+import Experience from './sections/Experience';
 
 function App() {
     const [theme, setTheme] = useState(() => {
@@ -20,7 +20,7 @@ function App() {
     return <div className="App">
         <a className="skip-link" href="#main">Skip to content</a>
         <Header theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
-        <main id="main"><ProfileView /><TechnologyView /><ExperienceView /><PersonalPortfolioCard /></main>
+        <main id="main"><About /><Skills /><Experience /><Projects /></main>
         <Footer />
     </div>;
 }
