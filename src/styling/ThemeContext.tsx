@@ -1,9 +1,15 @@
 import { createContext, useState, type ReactNode, useContext } from 'react';
 
-const ThemeContext = createContext<any>(null);
+type Theme = 'light' | 'dark';
+type ThemeContextValue = {
+    theme: Theme;
+    toggleTheme: () => void;
+};
+
+const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState<Theme>('light');
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));

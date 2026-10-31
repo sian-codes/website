@@ -1,7 +1,14 @@
+import type { ReactNode } from 'react';
 import './popup.css'
 import ContactDetails from "./ContactDetails.tsx";
 
-const Popup = (props: any) => {
+type PopupProps = {
+    trigger: boolean;
+    setTrigger: (open: boolean) => void;
+    children?: ReactNode;
+};
+
+const Popup = (props: PopupProps) => {
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
