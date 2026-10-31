@@ -1,16 +1,2 @@
-const Footer = () => {
-    return (
-        <footer className="bg-gray-800 text-white py-4">
-        <div className="container mx-auto text-center">
-            <p className="text-sm">
-            &copy; {new Date().getFullYear()} SNK - All rights reserved.
-            </p>
-            <p className="text-xs mt-2">
-            Built with ❤️ using React, TypeScript and Tailwind CSS.
-            </p>
-        </div>
-        </footer>
-    );
-}
-
+const Footer = () => <footer className="site-footer"><div className="footer-top"><div><p className="eyebrow">LET’S CONNECT</p><h2>Something in mind?</h2><a className="text-link" href="mailto:siannicole@proton.me">siannicole@proton.me</a></div><div className="social-links"><a href="https://github.com/sian-codes">GitHub</a><a href="https://www.linkedin.com/in/sian-kearley/">LinkedIn</a></div></div><div className="footer-bottom"><p>© {new Date().getFullYear()} Siân Kearley</p><p>Built with care, React & TypeScript.</p><a href="#main">Back to top</a></div></footer>;
 export default Footer;

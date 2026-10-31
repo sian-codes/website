@@ -1,21 +1,11 @@
-import '../components/header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faGithub, faLinkedin} from "@awesome.me/kit-459d1b3662/icons/classic/brands";
-import Popup from "./Popup.tsx";
-import {useState} from "react";
-import {faEnvelope} from "@awesome.me/kit-459d1b3662/icons/classic/solid";
-
-
-const Header = () => {
-    const [contactPopup, setContactPopup] = useState(false)
-    return (
-        <header className="header">
-            <a href="https://github.com/sian-codes"><FontAwesomeIcon icon= {faGithub} size={"2xl"} className="icons" /></a>
-            <a href="https://www.linkedin.com/in/si%C3%A2n-kearley-32151986/"><FontAwesomeIcon icon={faLinkedin} size={"2xl"} className="icons" /></a>
-            <FontAwesomeIcon icon={faEnvelope} size={"2xl"} className="icons" onClick={() => setContactPopup(true)} />
-            <Popup  trigger={contactPopup} setTrigger ={setContactPopup} />
-        </header>
-    );
-};
-
-export default Header
+import './header.css';
+const Header = ({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) => (
+    <header className="header">
+        <a className="wordmark" href="#main" aria-label="Siân home">Siân<span>.</span></a>
+        <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="mailto:siannicole@proton.me">Contact</a></nav>
+        <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
+            <span aria-hidden="true">{theme === 'dark' ? '☀' : '☾'}</span><span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+        </button>
+    </header>
+);
+export default Header;

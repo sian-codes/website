@@ -1,50 +1,27 @@
-import './App.css'
-import Header from "./components/Header.tsx";
-import ProfileView from "../src/views/ProfileView.tsx";
-import TechnologyView from "./views/TechnologyView.tsx";
-import PersonalPortfolioCard from "./components/PersonalPortfolioCard.tsx";
-import {createContext, useEffect, useState} from "react";
-import ReactSwitch from "react-switch";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faMoon, faSunBright} from "@awesome.me/kit-459d1b3662/icons/classic/solid";
-import Footer from "./components/Footer.tsx";
-
-const ThemeContext = createContext(null)
+import './App.css';
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
+import ProfileView from './views/ProfileView';
+import TechnologyView from './views/TechnologyView';
+import PersonalPortfolioCard from './components/PersonalPortfolioCard';
+import Footer from './components/Footer';
+import ExperienceView from './views/ExperienceView';
 
 function App() {
-    const [theme, setTheme] = useState('light');
-
-    const toggleTheme = () => {
-        setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
-    };
-
+    const [theme, setTheme] = useState(() => {
+        try { return localStorage.getItem('portfolio-theme') === 'light' ? 'light' : 'dark'; }
+        catch { return 'dark'; }
+    });
     useEffect(() => {
-        document.body.id = theme;
+        document.body.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        try { localStorage.setItem('portfolio-theme', theme); } catch { /* Storage may be unavailable. */ }
     }, [theme]);
-
-    return (
-  <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme}>
-        <Header />
-          <div className="switch">
-              <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} offColor={"#CAE8BD"}
-                checkedIcon={<div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
-                      <FontAwesomeIcon icon={faMoon} style={{ color: "#fff", fontSize: 16 }} />
-                  </div>
-              }
-               uncheckedIcon={
-                   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
-                       <FontAwesomeIcon icon={faSunBright} style={{ color: "#ffffff", fontSize: 16 }} />
-                   </div>
-               }/>
-          </div>
-          <ProfileView />
-            <TechnologyView />
-            <PersonalPortfolioCard />
-          <Footer />
-        </div>
-    </ThemeContext.Provider>
-  )
+    return <div className="App">
+        <a className="skip-link" href="#main">Skip to content</a>
+        <Header theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+        <main id="main"><ProfileView /><TechnologyView /><ExperienceView /><PersonalPortfolioCard /></main>
+        <Footer />
+    </div>;
 }
-
-export default App
+export default App;
